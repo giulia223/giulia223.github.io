@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GIULIA POALELUNGI — Pagina personala</title>
+  <meta name="description" content="Pagina personala a lui Giulia — proiecte, blog si contact." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:," />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">
+        <a href="#" class="logo">GIULIA POALELUNGI</a>
+      </div>
+      <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Despre</a></li>
+        <li><a href="#projects">Proiecte</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h1>Salut — eu sunt <span class="accent">Giulia</span></h1>
+      <p>Dezvoltator / Student / Hobbyist. Construiesc proiecte frumoase cu HTML, CSS, JS si C++.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">Vezi proiectele</a>
+        <a class="btn ghost" href="#contact">Contact</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="card section">
+      <h2>Despre mine</h2>
+      <p>Sunt pasionat de programare si invat permanent. Lucrez la proiecte personale si teme pentru examen. Aici gasesti proiectele mele publice si contactul.</p>
+    </section>
+
+    <section id="projects" class="card section">
+      <h2>Proiecte</h2>
+      <div class="grid">
+        <article class="project">
+          <h3>Proiect 1</h3>
+          <p>Descriere scurta a proiectului. Tech: C++, SQL, HTML.</p>
+          <p class="small"><a href="#" target="_blank">GitHub</a> · <a href="#" target="_blank">Live</a></p>
+        </article>
+        <article class="project">
+          <h3>Proiect 2</h3>
+          <p>Descriere scurta a proiectului. Exemplu tema, laborator sau portofoliu.</p>
+          <p class="small"><a href="#" target="_blank">GitHub</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="card section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML &amp; CSS</li>
+        <li>JavaScript (vanilla)</li>
+        <li>C / C++</li>
+        <li>Oracle SQL / PL/SQL</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card section">
+      <h2>Contact</h2>
+      <p>Daca vrei sa colaborezi sau ai o intrebare, scrie-mi:</p>
+      <form id="contactForm">
+        <label>
+          Nume
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Mesaj
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Trimite</button>
+          <a class="btn ghost" href="mailto:your@email.com">Trimite email</a>
+        </div>
+        <p id="formMsg" class="small" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> GIULIA POALELUNGI · <a href="https://github.com/giuliaP" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

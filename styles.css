@@ -169,51 +169,112 @@ main {
   font-size: 13px;
 }
 
-.skills {
+/* replaced simple list with animated skills cloud */
+.skills-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 0;
-  margin: 8px 0;
-  list-style: none;
-}
-
-.skills li {
-  background: rgba(255, 192, 203, 0.06);
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  background: transparent;
-  color: inherit;
-}
-
-.form-actions {
-  display: flex;
-  gap: 8px;
+  gap: 10px;
+  margin-top: 10px;
   align-items: center;
-  margin-top: 8px;
+  justify-content: flex-start;
 }
 
-.site-footer {
-  text-align: center;
-  padding: 18px 8px;
+/* icon + label styling for skill chips */
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+}
+
+/* chip visual */
+.skill-chip {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,111,181,0.12), rgba(255,133,192,0.08));
+  color: #fff;
+  font-weight: 600;
   color: var(--muted);
-  font-size: 14px;
+  transform: translateY(8px) scale(var(--s, 1));
+  opacity: 0;
+  transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 180ms ease;
+  box-shadow: none;
+  will-change: transform, opacity;
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.03);
+  animation: chip-in 420ms cubic-bezier(.2,.9,.3,1) forwards;
+}
+
+.skill-chip .icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 220ms ease, color 220ms ease;
+}
+
+.skill-chip svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* make icon pop slightly on hover */
+.skill-chip:hover .icon,
+.skill-chip:focus .icon {
+  transform: translateY(-3px) scale(1.06);
+  color: white;
+}
+
+/* ensure label inherits muted color but becomes white on hover */
+.skill-chip .label { color: var(--muted); font-weight:600; }
+.skill-chip:hover .label,
+.skill-chip:focus .label { color: #fff; }
+
+/* small hover/active */
+.skill-chip:hover,
+.skill-chip:focus {
+  transform: translateY(-6px) scale(calc(var(--s,1) + 0.03));
+  box-shadow: 0 10px 24px rgba(255,111,181,0.12);
+  color: white;
+}
+
+/* subtle continuous float after entrance */
+.skill-chip.visible {
+  animation-name: chip-in, float;
+  animation-duration: 420ms, 3800ms;
+  animation-timing-function: cubic-bezier(.2,.9,.3,1), ease-in-out;
+  animation-fill-mode: forwards, both;
+  animation-iteration-count: 1, infinite;
+  animation-delay: var(--delay, 0ms), calc(var(--delay, 0ms) + 420ms);
+  opacity: 1;
+}
+
+/* entrance */
+@keyframes chip-in {
+  from { transform: translateY(10px) scale(0.98); opacity: 0; }
+  to   { transform: translateY(0)    scale(var(--s,1)); opacity: 1; }
+}
+
+/* slow float loop */
+@keyframes float {
+  0%   { transform: translateY(0)   scale(var(--s,1)); }
+  50%  { transform: translateY(-6px) scale(calc(var(--s,1) + 0.02)); }
+  100% { transform: translateY(0)   scale(var(--s,1)); }
+}
+
+/* responsive: center chips on small screens */
+@media (max-width: 520px) {
+  .skills-cloud { justify-content: center; gap: 8px; }
+  .skill-chip { padding: 7px 12px; font-size: 14px; }
 }
 
 /* responsive */

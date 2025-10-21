@@ -15,16 +15,21 @@
         <a href="#" class="logo">Giulia</a>
       </div>
       <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">☰</button>
+      <div class="profile-picture">
+        <img src="content/images/profile.jpg" alt="Profile Picture of Giulia" />
+      </div>
       <ul class="nav-links" id="navLinks">
+        <li><a href="https://www.linkedin.com/in/giulia-poalelungi/" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <section class="hero">
-      <h1>Hi, I'm <span class="accent">Giulia</span></h1> 
-      <p>BSc CS @ University of Bucharest </p>
+      <h1>Hi, I'm <span class="accent">Giulia</span></h1>
+      <p>BSc CS @ University of Bucharest</p>
       <div class="hero-actions">
         <a class="btn" href="#projects">See my projects</a>
         <a class="btn ghost" href="#contact">Contact</a>
@@ -39,29 +44,46 @@
       <p>Driven by curiosity and the need to understand how things truly work, I see Computer Science as more than code — it’s the logic that brings ideas to life.
 I enjoy building practical solutions and exploring the mechanics behind systems, where creativity meets precision.
 What motivates me most are challenges — the kind that force you to think, debug, and ultimately make things work.</p>
-      <p> Here you'll find a mix of university work, personal experiments, and collaborative code.</p>
-    
-  </section>
+      <p>Here you'll find a mix of university work, personal experiments, and collaborative code.</p>
+    </section>
+
+    <section id="cv" class="card section">
+      <h2>CV</h2>
+
+      <div class="pdf-viewer">
+        <div class="pdf-toolbar">
+          <button id="pdfZoomOut" aria-label="Zoom out">−</button>
+          <button id="pdfZoomReset" aria-label="Reset zoom">100%</button>
+          <button id="pdfZoomIn" aria-label="Zoom in">+</button>
+          <button id="pdfFit" aria-label="Fit width">Fit</button>
+          <a id="pdfDownload" class="btn ghost" href="content/cv/Giulia_Poalelungi_Resume.pdf" download>Download PDF</a>
+        </div>
+
+        <div class="pdf-container">
+          <iframe id="cvFrame" src="content/cv/Giulia_Poalelungi_Resume.pdf#view=FitH" title="CV PDF" frameborder="0" aria-label="CV PDF"></iframe>
+        </div>
+      </div>
+    </section>
 
     <section id="projects" class="card section">
       <h2>Projects</h2>
       <div class="grid">
         <article class="project">
           <h3>OOP STORE</h3>
-          <p>A simulated store project built using Object-Oriented Programming concepts  in C++ combined with a local database.</p>
-          <p class="small"><a href="https://github.com/giulia223/OOP_STORE" target="_blank">GitHub</a></p>
+          <p>A simulated store project built using Object-Oriented Programming concepts in C++ combined with a local database.</p>
+          <p class="small"><a href="https://github.com/giulia223/OOP_STORE" target="_blank" rel="noopener">GitHub</a></p>
         </article>
 
         <article class="project">
           <h3>FormalLanguagesAndAutomataTheory</h3>
           <p>The project includes the simulation of DFA, NFA, PDA, and conversions between them using Python.</p>
-          <p class="small"><a href="https://github.com/giulia223/FormalLanguagesAndAutomataTheory_FMIUNIBUC" target="_blank">GitHub</a></p>
+          <p class="small"><a href="https://github.com/giulia223/FormalLanguagesAndAutomataTheory_FMIUNIBUC" target="_blank" rel="noopener">GitHub</a></p>
         </article>
 
         <article class="project">
           <h3>Reservation management system</h3>
           <p>This project was developed as part of an SQL course using Oracle and implements a comprehensive travel agency management system.</p>
-          <p class="small"><a href="https://github.com/giulia223/Reservation_management_system-" target="_blank">GitHub</a></p>
+          <p class="small"><a href="https://github.com/giulia223/Reservation_management_system-" target="_blank" rel="noopener">GitHub</a></p>
         </article>
 
         <article class="project">
@@ -70,91 +92,86 @@ What motivates me most are challenges — the kind that force you to think, debu
 It’s my ongoing AI project, focused on turning small daily challenges into automated, easy-to-handle routines.
 Still a work in progress, but evolving one feature at a time.</p>
           <p class="small">Status: In development · Built with AI assistance</p>
-
-          <p class="small"><a href="https://github.com/giulia223/CLARIO_APP" target="_blank">GitHub</a></p>
+          <p class="small"><a href="https://github.com/giulia223/CLARIO_APP" target="_blank" rel="noopener">GitHub</a></p>
         </article>
       </div>
     </section>
 
     <section id="skills" class="card section">
-  <h2>Skills</h2>
+      <h2>Skills</h2>
+      <div class="skills-cloud" id="skillsCloud" aria-label="Skills list">
+        <button class="skill-chip" data-s="1.15" aria-label="OOP / C++ / Java">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18L3 12l6-6"/>
+              <path d="M15 6l6 6-6 6"/>
+            </svg>
+          </span>
+          <span class="label">OOP / C++ / Java</span>
+        </button>
 
-  <div class="skills-cloud" id="skillsCloud" aria-label="Skills list">
-    <button class="skill-chip" data-s="1.15" aria-label="OOP / C++ / Java">
-      <span class="icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 18L3 12l6-6"/>
-          <path d="M15 6l6 6-6 6"/>
-        </svg>
-      </span>
-      <span class="label">OOP / C++ / Java</span>
-    </button>
+        <button class="skill-chip" data-s="1.12" aria-label="Python">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 0 0-10 10h9v4h-3a3 3 0 0 1-3-3H2a10 10 0 0 0 10 10v-9h4v3a3 3 0 0 1-3 3h-7"/>
+            </svg>
+          </span>
+          <span class="label">Python</span>
+        </button>
 
-    <button class="skill-chip" data-s="1.12" aria-label="Python">
-      <span class="icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2a10 10 0 0 0-10 10h9v4h-3a3 3 0 0 1-3-3H2a10 10 0 0 0 10 10v-9h4v3a3 3 0 0 1-3 3h-7"/>
-        </svg>
-      </span>
-      <span class="label">Python</span>
-    </button>
+        <button class="skill-chip" data-s="1.05" aria-label="SQL / Databases">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="6" rx="8" ry="3"/>
+              <path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/>
+              <path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>
+            </svg>
+          </span>
+          <span class="label">SQL / Databases</span>
+        </button>
 
-    <button class="skill-chip" data-s="1.05" aria-label="SQL / Databases">
-      <span class="icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <ellipse cx="12" cy="6" rx="8" ry="3"/>
-          <path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/>
-          <path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>
-        </svg>
-      </span>
-      <span class="label">SQL / Databases</span>
-    </button>
+        <button class="skill-chip" data-s="1.0" aria-label="C# / .NET">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M8 9h8M8 15h8M12 3v18"/>
+            </svg>
+          </span>
+          <span class="label">C# / .NET</span>
+        </button>
 
-    <button class="skill-chip" data-s="1.0" aria-label="C# / .NET">
-      <span class="icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="2"/>
-          <path d="M8 9h8M8 15h8M12 3v18"/>
-        </svg>
-      </span>
-      <span class="label">C# / .NET</span>
-    </button>
+        <button class="skill-chip" data-s="1.05" aria-label="Operating Systems / Linux">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 3v9l3 3"/>
+            </svg>
+          </span>
+          <span class="label">Operating Systems / Linux</span>
+        </button>
 
-    <button class="skill-chip" data-s="1.05" aria-label="Operating Systems / Linux">
-      <span class="icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M12 3v9l3 3"/>
-        </svg>
-      </span>
-      <span class="label">Operating Systems / Linux</span>
-    </button>
-
-    <button class="skill-chip" data-s="1.1" aria-label="React / Web Development">
-      <span class="icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="2"/>
-          <path d="M12 2c2.5 0 5 10 0 10s-2.5-10 0-10zM12 22c2.5 0 5-10 0-10s-2.5 10 0 10zM2 12c0 2.5 10 5 10 0S2 9.5 2 12zM22 12c0 2.5-10 5-10 0s10-2.5 10 0z"/>
-        </svg>
-      </span>
-      <span class="label">React / Web</span>
-    </button>
-  </div>
-</section>
-
+        <button class="skill-chip" data-s="1.1" aria-label="React / Web Development">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="2"/>
+              <path d="M12 2c2.5 0 5 10 0 10s-2.5-10 0-10zM12 22c2.5 0 5-10 0-10s-2.5 10 0 10zM2 12c0 2.5 10 5 10 0S2 9.5 2 12zM22 12c0 2.5-10 5-10 0s10-2.5 10 0z"/>
+            </svg>
+          </span>
+          <span class="label">React / Web</span>
+        </button>
+      </div>
+    </section>
 
     <section id="contact" class="card section">
-  <h2>Contact</h2>
-  <ul>
-    <li>Email: <a href="mailto:giuliapoalelungi28@gmail.com">giuliapoalelungi28@gmail.com</a></li>
-    
-  </ul>
-</section>
-
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:giuliapoalelungi28@gmail.com">giuliapoalelungi28@gmail.com</a></li>
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Giulia · <a href="https://github.com/giulia223" target="_blank">GitHub</a></p>
+    <p>© <span id="year"></span> Giulia · <a href="https://github.com/giulia223" target="_blank" rel="noopener">GitHub</a></p>
   </footer>
 
   <script src="script.js"></script>

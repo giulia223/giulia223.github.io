@@ -19,7 +19,24 @@
         <img src="content/images/profile.jpg" alt="Profile Picture of Giulia" />
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="https://www.linkedin.com/in/giulia-poalelungi/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/giulia-poalelungi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — opens in new tab">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v2"/>
+              <rect x="2" y="9" width="4" height="12" rx="1" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/giulia223" target="_blank" rel="noopener noreferrer" aria-label="GitHub — opens in new tab">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2C7.6 2 4 5.6 4 10c0 3.6 2.3 6.6 5.5 7.7.4.1.5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-1-1-1.3-1-1.3-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.9-2.2-.1-.2-.4-1 .1-2 0 0 .8-.3 2.3.9.7-.2 1.5-.3 2.3-.3.8 0 1.6.1 2.3.3 1.5-1.2 2.3-.9 2.3-.9.5 1 .2 1.8.1 2 .6.6.9 1.3.9 2.2 0 3.1-1.8 3.8-3.6 4 .3.3.6.8.6 1.6v2.4c0 .2.1.5.6.4C17.7 16.6 20 13.6 20 10c0-4.4-3.6-8-8-8z"/>
+            </svg>
+            GitHub
+          </a>
+        </li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#cv">CV</a></li>
@@ -28,11 +45,12 @@
       </ul>
     </nav>
     <section class="hero">
-      <h1>Hi, I'm <span class="accent">Giulia</span></h1>
-      <p>BSc CS @ University of Bucharest</p>
-      <div class="hero-actions">
-        <a class="btn" href="#projects">See my projects</a>
-        <a class="btn ghost" href="#contact">Contact</a>
+      <div class="hero-inner">
+        <img class="hero-photo" src="content/images/profile_pic.png" alt="Giulia — profile photo" />
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="accent">Giulia</span></h1>
+          <p>BSc CS @ University of Bucharest</p>
+        </div>
       </div>
     </section>
   </header>
@@ -75,13 +93,13 @@ What motivates me most are challenges — the kind that force you to think, debu
         </article>
 
         <article class="project">
-          <h3>FormalLanguagesAndAutomataTheory</h3>
+          <h3>FORMAL LANGUAGES AND AUTOMATA THEORY</h3>
           <p>The project includes the simulation of DFA, NFA, PDA, and conversions between them using Python.</p>
           <p class="small"><a href="https://github.com/giulia223/FormalLanguagesAndAutomataTheory_FMIUNIBUC" target="_blank" rel="noopener">GitHub</a></p>
         </article>
 
         <article class="project">
-          <h3>Reservation management system</h3>
+          <h3>RESERVATION MANAGEMENT SYSTEM</h3>
           <p>This project was developed as part of an SQL course using Oracle and implements a comprehensive travel agency management system.</p>
           <p class="small"><a href="https://github.com/giulia223/Reservation_management_system-" target="_blank" rel="noopener">GitHub</a></p>
         </article>
@@ -171,7 +189,14 @@ Still a work in progress, but evolving one feature at a time.</p>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Giulia · <a href="https://github.com/giulia223" target="_blank" rel="noopener">GitHub</a></p>
+    <p>© <span id="year"></span> Giulia ·
+      <a href="https://github.com/giulia223" target="_blank" rel="noopener noreferrer" aria-label="GitHub — opens in new tab">
+        GitHub
+        <svg class="nav-icon footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2C7.6 2 4 5.6 4 10c0 3.6 2.3 6.6 5.5 7.7.4.1.5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-1-1-1.3-1-1.3-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.9-2.2-.1-.2-.4-1 .1-2 0 0 .8-.3 2.3.9.7-.2 1.5-.3 2.3-.3.8 0 1.6.1 2.3.3 1.5-1.2 2.3-.9 2.3-.9.5 1 .2 1.8.1 2 .6.6.9 1.3.9 2.2 0 3.1-1.8 3.8-3.6 4 .3.3.6.8.6 1.6v2.4c0 .2.1.5.6.4C17.7 16.6 20 13.6 20 10c0-4.4-3.6-8-8-8z"/>
+        </svg>
+      </a>
+    </p>
   </footer>
 
   <script src="script.js"></script>

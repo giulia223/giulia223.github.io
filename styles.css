@@ -307,6 +307,47 @@ main {
   }
 }
 
+/* hero: image left, text right; responsive stack on small screens */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+/* smaller profile photo in hero */
+.hero-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* smaller avatar in nav (if shown) */
+.profile-picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+/* ensure hero text sits to the right */
+.hero-text { flex: 1; }
+
+/* responsive: stack hero image above text on small screens */
+@media (max-width: 520px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .hero-text { width: 100%; }
+  .hero-photo { width: 88px; height: 88px; }
+}
+
 .pdf-viewer { margin-top: 10px; }
 .pdf-toolbar {
   display: flex;
